@@ -12,7 +12,7 @@ for link in links:
     nrows=len(bsoup.find_all('tr'))
     ncols=24#len(entries)//nrows
     name=entries[1]
-    with open('{f}.csv'.format(f=str(name)[4:-5]), mode='w') as file:
+    with open('.\dataset\Scraps\{f}.csv'.format(f=str(name)[4:-5]), mode='w', newline='') as file:
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)     
         for i in range(nrows-1):
             col=[]
