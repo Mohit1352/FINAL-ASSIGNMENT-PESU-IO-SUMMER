@@ -17,12 +17,3 @@ for file in files:
     fn=open(".\Split\{f}".format(f=file),"w")
     fn.write(cont)
     fn.close()
-files=os.listdir('.\Modified')
-for file in files:
-    f=open(".\Modified\{f}".format(f=file),"r")
-    cont=f.read()
-    f.close()
-    cont=cont.replace("nan","0")
-    fn=open(".\Modified\{f}".format(f=file),"w")
-    fn.write(cont)
-    fn.close()
